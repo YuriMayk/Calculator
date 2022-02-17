@@ -24,14 +24,28 @@ const zeroButton = document.getElementById("zero-button")
 const pointButton = document.getElementById("point-button")
 const equalButton = document.getElementById("equal-button")
 
+const finalResult = document.getElementById("final-result")
+const operation = document.getElementById("operation")
+const saved = document.getElementById("saved")
+const typed = document.getElementById("typed")
 
+let realFinalResult = 0
+let showOperation = "Nenhuma operação selecionada"
 
-
+finalResult.innerHTML = `${realFinalResult}`
+operation.innerHTML = `${showOperation}`
 
 
 const check = ()=> {
     console.log("fui clicado")
 }
+
+
+//Typing Functions
+
+
+
+
 
 
 percentButton.addEventListener('click',check)
