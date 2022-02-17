@@ -20,7 +20,7 @@ O projeto ainda está em desenvolvimento. Abaixo estão as definições atuais d
 - [x] Create HTML/Criar estrutura HTML;
 - [x] Create CSS/Estilização com CSS;
 - [x] Layout Update/Atualizar o Layout;
-- [x] Add JavaScript/Adicionar JavaScript;
+- [ ] Add JavaScript/Adicionar JavaScript;
 - [ ] Put the project online/Colocar o projeto online;
 
 
