@@ -5,8 +5,8 @@
     font-family: 'Gruppo', 'cursive';
     color: black;
     font-size: large;
-    background: rgb(228,227,226);
-background: linear-gradient(75deg, rgba(228,227,226,1) 0%, rgba(198,172,242,1) 50%, rgba(122,122,119,1) 100%);
+    /* background: rgb(228, 227, 226);
+    background: linear-gradient(75deg, rgba(228, 227, 226, 1) 0%, rgb(114, 52, 221) 50%, rgba(122, 122, 119, 1) 100%); */
     font-weight: 600;
     outline: none
 }
@@ -15,6 +15,7 @@ background: linear-gradient(75deg, rgba(228,227,226,1) 0%, rgba(198,172,242,1) 5
     height: 100%;
     width: 100%;
 }
+
 .general {
     width: 300px;
     height: 670px;
@@ -40,21 +41,34 @@ background: linear-gradient(75deg, rgba(228,227,226,1) 0%, rgba(198,172,242,1) 5
 
 .result-div {
     border: 15px;
-    display: block;
+    display:flex;
+    flex-direction: column;
     height: 200px;
     border: dashed black;
+    width: 265px;
     background: rgb(215, 215, 219);
     background: linear-gradient(270deg, rgba(215, 215, 219, 1) 0%, rgba(226, 223, 223, 1) 100%);
+    line-height: 15px;
+    padding: 0 20px 0 0;
+    border:groove;
 }
 
-#result {
+.result {
+    
+    display: block;
     text-align: right;
-    margin: 125px 0 0 0;
+    margin: 15px 0 5px 0;
     font-size: 200%;
     background: rgb(215, 215, 219);
     background: linear-gradient(270deg, rgba(215, 215, 219, 1) 0%, rgba(226, 223, 223, 1) 100%);
-
+    padding: 0 8px 3px 0;
+    line-height: 20px;
+    
+    
+    
 }
+
+
 
 .numbers-button {
     color: rgba(0, 0, 0, 1);
@@ -81,4 +95,8 @@ background: linear-gradient(75deg, rgba(228,227,226,1) 0%, rgba(198,172,242,1) 5
     writing-mode: vertical-rl;
     line-height: 54px;
     margin-top: 15px;
+}
+
+p{
+    text-align: end;   
 }
