@@ -76,7 +76,7 @@ background: linear-gradient(75deg, rgba(228,227,226,1) 0%, rgba(198,172,242,1) 5
     background: radial-gradient(circle, rgba(199, 199, 200, 1) 0%, rgba(78, 77, 77, 0.52361111111111116) 100%);
 }
 
-#equal-btn {
+#equal-button {
     width: 87px;
     writing-mode: vertical-rl;
     line-height: 54px;
