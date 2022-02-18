@@ -35,7 +35,7 @@ let showOperation = "Nenhuma operação selecionada"
 finalResult.innerHTML = `${realFinalResult}`
 operation.innerHTML = `${showOperation}`
 
-
+//deletar a função check depois que finalizar aplicação. Manter o check, para observar se os botões estão funcionando.
 const check = ()=> {
     console.log("fui clicado")
 }
