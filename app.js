@@ -1,74 +1,135 @@
+'use strict'
+const display = document.getElementById("final-result")
+const numbers = document.querySelectorAll("[id*=button-number]")
+const operators = document.querySelectorAll("[id*=operator]")
 
-const percentButton = document.getElementById("percent-button")
-const ceButton = document.getElementById("ce-button")
-const cButton = document.getElementById("c-button")
-const oneDividedByButton = document.getElementById("one-divided-by-button")
-const backspaceButton = document.getElementById("backspace-button")
-const sevenButton = document.getElementById("seven-button")
-const eightButton = document.getElementById("eight-button")
-const nineButton = document.getElementById("nine-button")
-const divisionButton = document.getElementById("division-button")
-const exponentialButton = document.getElementById("exponential-button")
-const fourButton = document.getElementById("four-button")
-const fiveButton = document.getElementById("five-button")
-const sixButton = document.getElementById("six-button")
-const multiplicationButton = document.getElementById("multiplication-button")
-const squareButton = document.getElementById("square-button")
-const oneButton = document.getElementById("one-button")
-const twoButton = document.getElementById("two-button")
-const threeButton = document.getElementById("three-button")
-const minusButton = document.getElementById("minus-button")
-const plussButton = document.getElementById("pluss-button")
-const invertButton = document.getElementById("invert-button")
-const zeroButton = document.getElementById("zero-button")
-const pointButton = document.getElementById("point-button")
-const equalButton = document.getElementById("equal-button")
+let newNumberOnDisplay = true;
+let operator
+let firstNumber
 
-const finalResult = document.getElementById("final-result")
-const operation = document.getElementById("operation")
-const saved = document.getElementById("saved")
-const typed = document.getElementById("typed")
+const pendentOperation = () => operator !== undefined
 
-let realFinalResult = 0
-let showOperation = "Nenhuma operação selecionada"
-
-finalResult.innerHTML = `${realFinalResult}`
-operation.innerHTML = `${showOperation}`
-
-//deletar a função check depois que finalizar aplicação. Manter o check, para observar se os botões estão funcionando.
-const check = ()=> {
-    console.log("fui clicado")
+const calculate = () => {
+    if (pendentOperation()) {
+        const currentNumber = parseFloat(display.textContent)
+        newNumberOnDisplay = true
+        const result = eval(`${firstNumber}${operator}${currentNumber}`)
+        refreshDisplay(parseFloat(result))
+    }
 }
 
+const refreshDisplay = (text) => {
+    if (newNumberOnDisplay) {
+        display.textContent = text //.toLocaleString('BR')
+        newNumberOnDisplay = false
+    } else {
+        display.textContent += text //.toLocaleString('BR')
+    }
+}
 
-//Typing Functions
+const insertNumber = (event) => refreshDisplay(event.target.textContent)
+numbers.forEach(number => number.addEventListener("click", insertNumber))
 
 
+const selectOperator = (event) => {
+    if (!newNumberOnDisplay) {
+        calculate()
+        newNumberOnDisplay = true
+        operator = event.target.textContent
+        firstNumber = parseFloat(display.textContent)
+        console.log(operator)
+    }
+}
+
+operators.forEach(operator => operator.addEventListener("click", selectOperator))
+
+const activateEqual = () => {
+    calculate()
+    operator = undefined
+}
+
+document.getElementById("equal-button").addEventListener("click", activateEqual)
 
 
+const clearDisplay = () => display.textContent = ""
+document.getElementById("ce-operator").addEventListener("click", clearDisplay)
+
+const clearCalculation = () => {
+    clearDisplay()
+    operator = undefined
+    newNumberOnDisplay = true
+    firstNumber = undefined
+}
+
+document.getElementById("c-operator").addEventListener("click", clearCalculation)
+
+const removeLastCharacter = () => display.textContent = display.textContent.slice(0, -1)
+
+document.getElementById("backspace-delete").addEventListener("click", removeLastCharacter)
+
+const invertSign = () => {
+    newNumberOnDisplay = true
+    refreshDisplay(display.textContent * -1)
+
+}
+document.getElementById("invert-operator").addEventListener("click", invertSign)
+
+const thereIsAPoint = () => display.textContent.indexOf(".") !== -1
+const thereIsValue = () => display.textContent.length > 0
+
+const insertPoint = () => {
+    if (!thereIsAPoint()) {
+        if (thereIsValue()) {
+            refreshDisplay(".")
+        } else {
+            refreshDisplay("0.")
+        }
+    }
+}
+
+document.getElementById("point-button-point").addEventListener("click", insertPoint)
 
 
-percentButton.addEventListener('click',check)
-ceButton.addEventListener('click',check)
-cButton.addEventListener('click',check)
-oneDividedByButton.addEventListener('click',check)
-backspaceButton.addEventListener('click',check)
-sevenButton.addEventListener('click',check)
-eightButton.addEventListener('click',check)
-nineButton.addEventListener('click',check)
-divisionButton.addEventListener('click',check)
-exponentialButton.addEventListener('click',check)
-fourButton.addEventListener('click',check)
-fiveButton.addEventListener('click',check)
-sixButton.addEventListener('click',check)
-multiplicationButton.addEventListener('click',check)
-squareButton.addEventListener('click',check)
-oneButton.addEventListener('click',check)
-twoButton.addEventListener('click',check)
-threeButton.addEventListener('click',check)
-minusButton.addEventListener('click',check)
-plussButton.addEventListener('click',check)
-invertButton.addEventListener('click',check)
-zeroButton.addEventListener('click',check)
-pointButton.addEventListener('click',check)
-equalButton.addEventListener('click',check)
+const keyboardMap = {
+    "0": "zero-button-number",
+    "1": "one-button-number",
+    "2": "two-button-number",
+    "3": "three-button-number",
+    "4": "four-button-number",
+    "5": "five-button-number",
+    "6": "six-button-number",
+    "7": "seven-button-number",
+    "8": "eight-button-number",
+    "9": "nine-button-number",
+    "+": "pluss-operator",
+    "-": "minus-operator",
+    "*": "multiplication-operator",
+    "/": "division-operator",
+    "Enter": "equal-button",
+    "=": "equal-button",
+    ".": "point-button-point",
+    ",": "point-button-point",
+    "Backspace": "backspace-delete",
+    "Delete": "backspace-delete",
+    "c": "ce-operator",
+    "Escape": "c-operator"
+}
+
+const toMapKeyboard = (event) => {
+    const key = event.key
+    console.log(key)
+    const allowedKey = () => Object.keys(keyboardMap).indexOf(key) !== -1
+
+    if (allowedKey()) {
+        document.getElementById(keyboardMap[key]).click()
+    }
+}
+
+document.addEventListener("keydown", toMapKeyboard)
+
+const percent = () => {
+    firstNumber = firstNumber * 1/100
+    refreshDisplay(firstNumber)
+}
+
+document.getElementById("percent-operator").addEventListener("click",percent)

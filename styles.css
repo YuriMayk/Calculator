@@ -5,20 +5,16 @@
     font-family: 'Gruppo', 'cursive';
     color: black;
     font-size: large;
-    /* background: rgb(228, 227, 226);
-    background: linear-gradient(75deg, rgba(228, 227, 226, 1) 0%, rgb(114, 52, 221) 50%, rgba(122, 122, 119, 1) 100%); */
+    background-image: url(/assets/screenshot_2019-06-25_at_5.33.15_pm_2.png);
+    background-repeat:no-repeat;
+    background-size:auto;    
     font-weight: 600;
-    outline: none
-}
-
-.body {
-    height: 100%;
-    width: 100%;
+    outline: none;
 }
 
 .general {
     width: 300px;
-    height: 670px;
+    height: 640px;
     border: double;
     padding: 15px;
     margin: 150px auto 0 auto;
@@ -49,12 +45,12 @@
     background: rgb(215, 215, 219);
     background: linear-gradient(270deg, rgba(215, 215, 219, 1) 0%, rgba(226, 223, 223, 1) 100%);
     line-height: 15px;
-    padding: 0 20px 0 0;
+    padding: 10px 20px 0 0;
     border:groove;
+    
 }
 
 .result {
-    
     display: block;
     text-align: right;
     margin: 15px 0 5px 0;
@@ -62,13 +58,8 @@
     background: rgb(215, 215, 219);
     background: linear-gradient(270deg, rgba(215, 215, 219, 1) 0%, rgba(226, 223, 223, 1) 100%);
     padding: 0 8px 3px 0;
-    line-height: 20px;
-    
-    
-    
+    line-height: 20px;  
 }
-
-
 
 .numbers-button {
     color: rgba(0, 0, 0, 1);
@@ -92,11 +83,11 @@
 
 #equal-button {
     width: 87px;
-    writing-mode: vertical-rl;
     line-height: 54px;
-    margin-top: 15px;
 }
 
 p{
+    background: rgb(215, 215, 219);
+    background: linear-gradient(270deg, rgba(215, 215, 219, 1) 0%, rgba(226, 223, 223, 1) 100%);
     text-align: end;   
 }
