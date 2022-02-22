@@ -9,14 +9,27 @@
     outline: none;
 }
 
-#master-div{
-    height:auto;
+@media only screen and (max-device-width: 400px) {
+    #master-div {
+        
+        
+        margin: 50px 0;
+        border-radius: 150px;
+        background-image: url(./assets/screenshot_2019-06-25_at_5.33.15_pm_2.png);
+        background-repeat: round;
+        padding-top: 10px;
+        padding-bottom: 110px;
+    }
+}
+
+#master-div {
+    height: auto;
     width: auto;
     margin: 100px;
     border-radius: 15px;
     background-image: url(./assets/screenshot_2019-06-25_at_5.33.15_pm_2.png);
-    background-repeat:round;
-    background-size:auto;
+    background-repeat: round;
+    background-size: auto;
     padding-top: 10px;
     padding-bottom: 110px;
 }
@@ -47,7 +60,7 @@
 
 .result-div {
     border: 15px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     height: 75px;
     border: dashed black;
@@ -56,8 +69,8 @@
     background: linear-gradient(270deg, rgba(215, 215, 219, 1) 0%, rgba(226, 223, 223, 1) 100%);
     line-height: 15px;
     padding: 10px 20px 0 0;
-    border:groove;
-    
+    border: groove;
+
 }
 
 .result {
@@ -68,7 +81,7 @@
     background: rgb(215, 215, 219);
     background: linear-gradient(270deg, rgba(215, 215, 219, 1) 0%, rgba(226, 223, 223, 1) 100%);
     padding: 0 8px 3px 0;
-    line-height: 20px;  
+    line-height: 20px;
 }
 
 .numbers-button {
@@ -91,8 +104,8 @@
     background: radial-gradient(circle, rgba(199, 199, 200, 1) 0%, rgba(78, 77, 77, 0.52361111111111116) 100%);
 }
 
-p{
+p {
     background: rgb(215, 215, 219);
     background: linear-gradient(270deg, rgba(215, 215, 219, 1) 0%, rgba(226, 223, 223, 1) 100%);
-    text-align: end;   
+    text-align: end;
 }
