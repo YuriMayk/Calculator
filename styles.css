@@ -9,18 +9,7 @@
     outline: none;
 }
 
-@media only screen and (max-device-width: 400px) {
-    #master-div {
-        
-        
-        margin: 50px 0;
-        border-radius: 150px;
-        background-image: url(./assets/screenshot_2019-06-25_at_5.33.15_pm_2.png);
-        background-repeat: round;
-        padding-top: 10px;
-        padding-bottom: 110px;
-    }
-}
+
 
 #master-div {
     height: auto;
@@ -108,4 +97,15 @@ p {
     background: rgb(215, 215, 219);
     background: linear-gradient(270deg, rgba(215, 215, 219, 1) 0%, rgba(226, 223, 223, 1) 100%);
     text-align: end;
+}
+
+@media (max-width: 900px) {
+    #master-div {
+        margin: 50px 0;
+        border-radius: 150px;
+        background-image: url(./assets/screenshot_2019-06-25_at_5.33.15_pm_2.png);
+        background-repeat: round;
+        padding-top: 10px;
+        padding-bottom: 110px;
+    }
 }
