@@ -4,12 +4,11 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 
 
-<!-- <img src="./assets/Project-Image.png" alt="Imagem da Interface do projeto/ Project's Interface Image">
+<img src="./assets/running-application.png" alt="Imagem da Interface do projeto/ Project's Interface Image">
 
-> Money Converter's Interface/ Interface do Money Converter -->
-
-<!-- ### Click at link below to see it working! / Clique no link abaixo para vê-lo funcionando!
-<a href="https://yurimayk.github.io/CONVERTERPROJECT/">Clique aqui!</a> -->
+> Calculator Interface/ Interface do Calculator
+### Click at link below to see it working! / Clique no link abaixo para vê-lo funcionando!
+<a href="https://yurimayk.github.io/Calculator/">Clique aqui!</a>
 
 ### Project steps/Etapas do Projeto
 
@@ -20,8 +19,9 @@ O projeto ainda está em desenvolvimento. Abaixo estão as definições atuais d
 - [x] Create HTML/Criar estrutura HTML;
 - [x] Create CSS/Estilização com CSS;
 - [x] Layout Update/Atualizar o Layout;
-- [ ] Add JavaScript/Adicionar JavaScript;
-- [ ] Put the project online/Colocar o projeto online;
+- [x] Add JavaScript/Adicionar JavaScript;
+- [x] Put the project online/Colocar o projeto online;
+- [ ] Add Functions
 
 
 ## 🤝 Contributor/Colaborador
