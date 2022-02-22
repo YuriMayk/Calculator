@@ -13,68 +13,72 @@
 </head>
 
 <body>
+    <div id="master-div">
 
-    <div class="general">
-        <div class="result-div">
-            <div class="historic"></div>
-            <p>Final Result</p>
-            <p class="result" id="final-result">0</p>
+        <div class="general">
+            <div class="result-div">
+                <div class="historic"></div>
+                <p>Final Result</p>
+                <p class="result" id="final-result">0</p>
 
-        </div>
+            </div>
 
-        <div class="numbers-div">
+            <div class="numbers-div">
 
-            <div class="line-one">
+                <div class="line-one">
 
-                <div class="effects-div">
-                    <button class="effects-button btn" id="percent-operator">%</button>
-                    <button class="effects-button btn" id="ce-operator">CE</button>
-                    <button class="effects-button btn" id="c-operator">C</button>
-                    <button class="effects-button btn" id="one-divided-by-operator">1/x</button>
-                    <button class="effects-button btn" id="backspace-delete">←</button>
+                    <div class="effects-div">
+                        <!-- <button class="effects-button btn" id="percent-operator">%</button> -->
+                        <button class="effects-button btn" id="ce-operator">CE</button>
+                        <button class="effects-button btn" id="c-operator">C</button>
+                        <!-- <button class="effects-button btn" id="one-divided-by-operator">1/x</button> -->
+                        <button class="effects-button btn" id="backspace-delete">←</button>
+                        <button class="effects-button btn" id="division-operator">/</button>
+                    </div>
+
+                    <button class="numbers-button btn" id="seven-button-number">7</button>
+                    <button class="numbers-button btn" id="eight-button-number">8</button>
+                    <button class="numbers-button btn" id="nine-button-number">9</button>
+
+                    <!-- <button class="effects-button btn" id="exponential-operator">x²</button> -->
+                    <button class="effects-button btn" id="multiplication-operator">*</button>
+                </div>
+
+                <div class="line-two">
+
+
+                    <button class="numbers-button btn" id="four-button-number">4</button>
+                    <button class="numbers-button btn" id="five-button-number">5</button>
+                    <button class="numbers-button btn" id="six-button-number">6</button>
+
+                    <!-- <button class="effects-button btn" id="square-operator"> x(1/2)</button> -->
+                    <button class="effects-button btn" id="pluss-operator">+</button>
+
 
                 </div>
 
-                <button class="numbers-button btn" id="seven-button-number">7</button>
-                <button class="numbers-button btn" id="eight-button-number">8</button>
-                <button class="numbers-button btn" id="nine-button-number">9</button>
-                <button class="effects-button btn" id="division-operator">/</button>
-                <button class="effects-button btn" id="exponential-operator">x²</button>
-            </div>
+                <div class="line-three">
 
-            <div class="line-two">
+                    <button class="numbers-button btn" id="one-button-number">1</button>
+                    <button class="numbers-button btn" id="two-button-number">2</button>
+                    <button class="numbers-button btn" id="three-button-number">3</button>
+                    <button class="effects-button btn" id="minus-operator">-</button>
 
+                </div>
 
-                <button class="numbers-button btn" id="four-button-number">4</button>
-                <button class="numbers-button btn" id="five-button-number">5</button>
-                <button class="numbers-button btn" id="six-button-number">6</button>
-                <button class="effects-button btn" id="multiplication-operator">*</button>
-                <button class="effects-button btn" id="square-operator"> x(1/2)</button>
+                <div class="line-four">
 
+                    <button class="numbers-button btn" id="invert-operator">+/-</button>
+                    <button class="numbers-button btn" id="zero-button-number">0</button>
+                    <button class="numbers-button btn" id="point-button-point">.</button>
 
-            </div>
+                    <button class="numbers-button btn " id="equal-button">=</button>
 
-            <div class="line-three">
-
-                <button class="numbers-button btn" id="one-button-number">1</button>
-                <button class="numbers-button btn" id="two-button-number">2</button>
-                <button class="numbers-button btn" id="three-button-number">3</button>
-                <button class="effects-button btn" id="minus-operator">-</button>
-                <button class="effects-button btn" id="pluss-operator">+</button>
-            </div>
-
-            <div class="line-four">
-
-                <button class="numbers-button btn" id="invert-operator">+/-</button>
-                <button class="numbers-button btn" id="zero-button-number">0</button>
-                <button class="numbers-button btn" id="point-button-point">.</button>
-
-                <button class="numbers-button btn " id="equal-button">=</button>
+                </div>
 
             </div>
 
         </div>
-
     </div>
     <script src="./app.js"></script>
 </body>

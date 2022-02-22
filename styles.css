@@ -5,19 +5,29 @@
     font-family: 'Gruppo', 'cursive';
     color: black;
     font-size: large;
-    background-image: url(/assets/screenshot_2019-06-25_at_5.33.15_pm_2.png);
-    background-repeat:no-repeat;
-    background-size:auto;    
     font-weight: 600;
     outline: none;
 }
 
+#master-div{
+    height:auto;
+    width: auto;
+    margin: 100px;
+    border-radius: 15px;
+    background-image: url(/assets/screenshot_2019-06-25_at_5.33.15_pm_2.png);
+    background-repeat:round;
+    background-size:auto;
+    padding-top: 10px;
+    padding-bottom: 110px;
+}
+
 .general {
     width: 300px;
-    height: 640px;
+    height: 445px;
     border: double;
+    border-radius: 15px;
     padding: 15px;
-    margin: 150px auto 0 auto;
+    margin: 125px auto 0 auto;
     background: rgb(241, 241, 241);
     background: linear-gradient(90deg, rgba(241, 241, 241, 1) 0%, rgba(172, 172, 172, 1) 100%);
 }
@@ -39,7 +49,7 @@
     border: 15px;
     display:flex;
     flex-direction: column;
-    height: 200px;
+    height: 75px;
     border: dashed black;
     width: 265px;
     background: rgb(215, 215, 219);
@@ -69,7 +79,7 @@
 .btn {
     height: 54px;
     width: 36px;
-    margin: 8px 2px;
+    margin: 2px 8px;
     cursor: pointer;
     border-radius: 25px;
     background: rgb(199, 199, 200);
@@ -79,11 +89,6 @@
 :active.btn {
     background: rgb(199, 199, 200);
     background: radial-gradient(circle, rgba(199, 199, 200, 1) 0%, rgba(78, 77, 77, 0.52361111111111116) 100%);
-}
-
-#equal-button {
-    width: 87px;
-    line-height: 54px;
 }
 
 p{
